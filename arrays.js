@@ -67,7 +67,6 @@ multipleBySelf.forEach((item) => {
     console.log(areTheyPositive(item))
 });
 
-
 console.log(multipleBySelf.every(item => {
     return true
 }))
