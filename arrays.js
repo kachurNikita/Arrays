@@ -81,6 +81,3 @@ console.log(multipleBySelf.every(item => {
  multipleBySelf.forEach(item => {
      console.log((Math.pow(item, 3)))
 })
-
-
-
