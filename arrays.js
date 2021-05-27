@@ -1,101 +1,87 @@
 'use strict';
 // Create array, initialize him with random numbers
+//Task 0
 
 const array = [];
-for(let i = 0; i < 8; i++) {
+for(let i = 0; i < 10; i++) {
     array.push(Math.ceil(Math.random() * 100))
 }
 
+
+//Task 1
 //Delete last element
-
-array.pop();
-
 // add 2 elements in begin and an end of array
-
+array.pop();
 array.unshift(10);
 array.push(0);
 
 // array length
-
-// array.length
-
-// console.log(array)
+//Task 2
+ array.length
 
 // even index array
+//Task 3
 
-// const evenIndexArray = array.filter((item, index) => {
-//     if (index % 2 === 0) {
-//         return true
-//     }
-// });
-//
-
-const evenIndexArray = array.filter((item,index) => {
-    if(index % 2 === 0) {
-        return index
-    }
+array.filter((item, index)=> {
+    return index % 2 === 0 && item !== 0 && index !== 0
 });
 
-// even items
-
-const evenItemArray = array.filter((item,index) => {
-    if(item % 2 === 0) {
-        return item
-    }
+//Task 4
+array.filter((item, index) => {
+    return item % 2 === 0
 });
 
-
-// item === 0
-
-const zeroIndexArray = array.filter((item, index) => {
-    if (item === 0) {
-        return  index
-    }
+//Task 5
+array.filter ((item, index) => {
+   return item === 0
 });
 
-array.forEach(item => {
-    if  (item === 0) {
-       return console.log(`We have a ${item} total value`)
-    }
-});
+//Task 6
 
-// Numbers with plus
+array.filter((item, index, array)=> {
+    return item === 0
+})
 
-const plusArray = [-1, 5, 0, 9, -10];
+//Task 7
+
+const plusArray = [-1, 5, 0, 9, -10,];
 
 const plusValuseArray = plusArray.filter(item => {
-    if (item > 0) {
-        return item
-    }
+   return item >= 1
 });
+
+//Task 8
 
 const multipleBySelf = plusArray.map(item => {
     return item * item
 })
 
-multipleBySelf.push('hi')
 // are  numbers is positive and  they really numbers?
+//Task 9
 
-//
-// function areTheyPositive (element) {
-//    return typeof element === 'number' && element > 0
-// }
-//
-// multipleBySelf.forEach((item) => {
-//     console.log(areTheyPositive(item))
-// });
+function areTheyPositive (element) {
+   return typeof element === 'number' && element > 0
+}
 
-multipleBySelf.forEach(item => {
-     let result = typeof item === 'number' && item > 0;
-    console.log(result)
-    return result
-})
+multipleBySelf.forEach((item) => {
+    console.log(areTheyPositive(item))
+});
 
-let someArr = []
+
+console.log(multipleBySelf.every(item => {
+    return true
+}))
+// Task 10
+
+    plusArray.some(item => {
+        return item < 0
+    })
+
+// Task 11
+
  multipleBySelf.forEach(item => {
-   someArr.push(Math.pow(item, 3))
-
+     console.log((Math.pow(item, 3)))
 })
 
-console.log(someArr)
+
 
