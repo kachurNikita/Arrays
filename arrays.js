@@ -48,7 +48,7 @@ const plusArray = [-1, 5, 0, 9, -10,];
 
 const plusValuseArray = plusArray.filter(item => {
    return item >= 1
-});
+})
 
 //Task 8
 
