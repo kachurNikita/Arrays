@@ -7,7 +7,6 @@ for(let i = 0; i < 10; i++) {
     array.push(Math.ceil(Math.random() * 100))
 }
 
-
 //Task 1
 //Delete last element
 // add 2 elements in begin and an end of array
@@ -23,7 +22,7 @@ array.push(0);
 //Task 3
 
 array.filter((item, index)=> {
-    return index % 2 === 0 && item !== 0 && index !== 0
+    return index % 2 === 0
 });
 
 //Task 4
@@ -33,21 +32,25 @@ array.filter((item, index) => {
 
 //Task 5
 array.filter ((item, index) => {
-   return item === 0
+   return index === 0
 });
+
+array.findIndex((item, index) => {
+  return index % 2 === 0;
+})
 
 //Task 6
 
-array.filter((item, index, array)=> {
-    return item === 0
+array.forEach((item, index, array)=> {
+    console.log(item === 0)
 })
 
 //Task 7
 
 const plusArray = [-1, 5, 0, 9, -10,];
 
-const plusValuseArray = plusArray.filter(item => {
-   return item >= 1
+plusArray.forEach(item => {
+    console.log(item === 0)
 })
 
 //Task 8
@@ -63,13 +66,11 @@ function areTheyPositive (element) {
    return typeof element === 'number' && element > 0
 }
 
-multipleBySelf.forEach((item) => {
-    console.log(areTheyPositive(item))
-});
 
-console.log(multipleBySelf.every(item => {
-    return true
-}))
+multipleBySelf.every(item => {
+        areTheyPositive(item)
+})
+
 // Task 10
 
     plusArray.some(item => {
